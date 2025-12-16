@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Jurídico | Auxílio-Acidente</title>
+  <meta name="description" content="Questionário preliminar para avaliar indícios de viabilidade jurídica de Auxílio-Acidente." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">Avaliação preliminar</p>
+      <h1>Quiz jurídico sobre Auxílio-Acidente</h1>
+      <p class="lead">Verifique de forma técnica e informativa se existem indícios para análise jurídica na via judicial.</p>
+    </header>
+
+    <!-- Tela 0 - Contextualização -->
+    <section id="intro" class="card active" aria-labelledby="intro-title">
+      <h2 id="intro-title">Contexto e orientações</h2>
+      <p class="intro-text">Este questionário serve para avaliar, de forma preliminar, se um caso de Auxílio-Acidente pode ser levado à Justiça.</p>
+      <p class="intro-text">O INSS raramente concede esse benefício administrativamente.<br />Quando existe direito, o reconhecimento costuma ocorrer na via judicial, após perícia.</p>
+      <p class="intro-text">Esta análise não garante concessão de benefício.</p>
+      <div class="actions">
+        <button id="startBtn" class="btn primary">Começar análise</button>
+      </div>
+    </section>
+
+    <!-- Etapas do quiz -->
+    <section id="quiz" class="card hidden" aria-live="polite">
+      <div class="progress-wrapper" aria-label="Progresso do questionário">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="progress-fill"></span>
+        </div>
+        <p class="progress-text">Pergunta <span id="currentStep">1</span> de <span id="totalSteps">8</span></p>
+      </div>
+
+      <div class="question-area">
+        <p id="question-title" class="question-title"></p>
+        <div id="options" class="options" role="group" aria-label="Opções da pergunta"></div>
+      </div>
+
+      <div class="actions spaced">
+        <button id="prevBtn" class="btn ghost" type="button">Voltar</button>
+        <button id="nextBtn" class="btn primary" type="button">Próxima</button>
+      </div>
+    </section>
+
+    <!-- Tela final - Resultado -->
+    <section id="result" class="card hidden" aria-labelledby="result-title">
+      <h2 id="result-title">Resultado preliminar</h2>
+      <p class="intro-text">Com base nas informações fornecidas, há indícios que justificam a análise jurídica da viabilidade de Auxílio-Acidente na via judicial.</p>
+      <p class="intro-text">O Auxílio-Acidente raramente é concedido pelo INSS administrativamente. Quando existe direito, o reconhecimento costuma ocorrer na Justiça.</p>
+      <p class="intro-text">Esta análise preliminar não garante concessão de benefício.</p>
+      <div class="actions spaced">
+        <button id="ctaBtn" class="btn primary" type="button">Prosseguir para Análise de Viabilidade Judicial</button>
+        <button id="restartBtn" class="btn ghost" type="button">Refazer questionário</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
